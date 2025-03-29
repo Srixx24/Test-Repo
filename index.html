@@ -52,22 +52,24 @@
 
             // Check visibility and render overlays
             if (isVisible(faceMesh.eyes)) {
-                renderer.render(scene, camera);
+                faceMesh.eyes.visible = true; // Show if visible
             } else {
                 faceMesh.eyes.visible = false; // Stop rendering if obstructed
             }
 
             if (isVisible(faceMesh.lips)) {
-                renderer.render(scene, camera);
+                faceMesh.lips.visible = true; // Show if visible
             } else {
                 faceMesh.lips.visible = false; // Stop rendering if obstructed
             }
 
             if (isVisible(faceMesh.face)) {
-                renderer.render(scene, camera);
+                faceMesh.face.visible = true; // Show if visible
             } else {
                 faceMesh.face.visible = false; // Stop rendering if obstructed
             }
+
+            renderer.render(scene, camera);
         }
 
         camera.position.z = 2;
