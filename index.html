@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Face Mesh Overlay</title>
+    <style>
+        body { margin: 0; }
+        canvas { display: block; }
+    </style>
+    
+    <!-- Links -->
+    <link href="https://fonts.googleapis.com/css2?family=Parkinsans:wght@300..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="styles/index.css">
+
+    <!-- Scripts -->
+    <script src="https://aframe.io/releases/1.4.2/aframe.min.js"></script>
+    <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
+    <script src="https://threejs.org/build/three.min.js"></script>
+    <script src="https://aframe.io/releases/1.4.2/aframe.min.js"></script>
+    <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
+    <script src="faceMap.js"></script>
+</head>
+<body>
+    <div class="welcome-screen" id="welcome-screen">
+        <div style="display: flex;flex-direction: column;align-items: center;">
+          <div>Welcome</div>
+          <div>to the Test</div>
+        </div>
+    </div>
+      <a-scene id="AR-camera" overlay-visibility="" vr-mode-ui="enabled: false;" embedded arjs="sourceType: webcam;" cursor="rayOrigin: mouse" raycaster="objects: .clickable;"></a-scene>
+</body>
+</html>
